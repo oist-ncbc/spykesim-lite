@@ -1,0 +1,8 @@
+.DS_Store
+
+.python-version
+__pycache__/
+.vscode/
+
+*.log
+output/
