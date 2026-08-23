@@ -1,0 +1,27 @@
+{
+    "dataset": "071102",
+    "start_time_sec": 100,
+    "duration_min": 1,
+    "max_rate_Hz": 3,
+
+    "window_ms": 100,
+    "slide_ms": 100,
+    "bin_ms": 1,
+
+    "alpha": 0.0693,
+    "match_penalty": 0,
+    "min_neurons": 3,
+
+    "rand_state": 12345,
+    "damping": 0.9,
+    "max_iter": 2000,
+    "min_cluster_size": 10,
+
+    "spike_relevance_th": 0.7,
+    "similarity_th": 1,
+    "alignment_th": 1,
+
+    "recall_th": 1,
+    "overlap_th": 2,
+    "min_hits": 5
+}

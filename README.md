@@ -35,18 +35,18 @@ pip install -r requirements.txt
 
 The current code is tailored to process the cross-layer rat motor cortex dataset previously described in [Isomura et al. (2009)](https://www.nature.com/articles/nn.2431), to be published publicly as **10.5281/zenodo.22055254** (currently a private draft). Each session contains `All.clu.X` and `All.res.X` files, with X = 1, 2 indicating the index of the tetrode (1: L2/3, also referred to as superficial layer; 2: L5, or deep layer).
 
-Set `data_root = "/path/to/data"` (or the dataset path variable) in `data_manager.py`, line 13, before running. Choose which session to analyze using the configuration file (see below).
+Set `data_root = "/path/to/data"` (or the dataset path variable) in `src/data_manager.py`, line 13, before running. Choose which session to analyze using the configuration file (see below).
 
 ### Configuration file
 
-The scripts expect a configuration file in JSON format. The specific session, start time of the stage of interest, and the exponential gap penalty to be used in the edit similarity calculation (see manuscript for details) are set in this file.
+The scripts expect a configuration file in JSON format. The specific session, start time and duration of the epoch of interest, and the exponential gap penalty to be used in the edit similarity calculation (see manuscript for details) are set in this file.
 
 > [!TIP]
 > Edit similarity calculation (computation and memory) scales as Θ(T^2) with the number of segmented windows T. We suggest starting with a short duration for testing purposes.
 
 #### Example
 
-See `src/config_example.json`. A description of the parameters is provided below.
+Below is a copy of `config.json`. A description of the parameters is provided in a later section.
 
 ```json
 {
@@ -106,7 +106,7 @@ All outputs are written to a local folder following the format set by the config
 ./output/dataset{dataset}_start{start_time_sec}_dur{duration_min}_fr{max_rate_Hz}_win{window_ms}_slide{slide_ms}_bin{bin_ms}_alpha{alpha}_matchpen{match_penalty}_minneu{min_neurons}
 ```
 
-For the rest of the analysis introduced in the manuscript, uploaded on a different repository (under preparation), we use the `final_prof_dict_{suffix}.npz` file written by `run_profiles.py`.
+For the rest of the analysis introduced in the manuscript, uploaded on a different repository (under preparation), we use the `final_prof_dict_{suffix}.npz` file written by `src/run_profiles.py`.
 
 ## Parameter description
 
