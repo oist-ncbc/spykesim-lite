@@ -10,7 +10,7 @@ def get_path_data(dataset: str):
     """
     Chooses directory to load data from depending on locality
     """
-    data_root = "/Users/milena/DATA/raw_data/"
+    data_root = "path/to/data" # set this to the actual path where your data is stored
     path_data = os.path.join(data_root, dataset + "_new3/")
 
     abs_path_data = os.path.abspath(path_data)
