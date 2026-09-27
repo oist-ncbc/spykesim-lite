@@ -10,8 +10,8 @@ def get_path_data(dataset: str):
     """
     Chooses directory to load data from depending on locality
     """
-    data_root = "path/to/data" # set this to the actual path where your data is stored
-    path_data = os.path.join(data_root, dataset + "_new3/")
+    data_root = "path/to/data"  # set this to the actual path where your data is stored
+    path_data = os.path.join(data_root, dataset)
 
     abs_path_data = os.path.abspath(path_data)
 
