@@ -1,6 +1,6 @@
 # spykesim-lite
 
-`spykesim-lite` is a reinterpretation of [spykesim](https://github.com/oist-ncbc/spykesim) based on the original source code and the description provided by [Watanabe et al. (2019)](https://www.frontiersin.org/articles/10.3389/fninf.2019.00039). This repository offers functions for measurement of similarity between two time series of multi-neuron spiking activity and provides the backbone for the analysis in the manuscript "Cross-layer non-random networks associated with reward-earning motor behavior" (provisional title, under preparation, citation to be added later).
+`spykesim-lite` is a reinterpretation of [spykesim](https://github.com/oist-ncbc/spykesim) based on the original source code and the description provided by [Watanabe et al. (2019)](https://www.frontiersin.org/articles/10.3389/fninf.2019.00039). This repository offers functions for measurement of similarity between two time series of multi-neuron spiking activity and provides the backbone for the analysis in the manuscript "Cross-layer non-random networks associated with reward-earning motor behavior" (provisional title, submitted for review).
 
 Among the modifications provided by this repository, we highlight:
 
@@ -33,7 +33,7 @@ pip install -r requirements.txt
 
 ### Data preparation
 
-The current code is tailored to process the cross-layer rat motor cortex dataset previously described in [Isomura et al. (2009)](https://www.nature.com/articles/nn.2431), to be published publicly as **10.5281/zenodo.22055254** (currently a private draft). Each session contains `All.clu.X` and `All.res.X` files, with X = 1, 2 indicating the index of the tetrode (1: L2/3, also referred to as superficial layer; 2: L5, or deep layer).
+The current code is tailored to process the cross-layer rat motor cortex dataset previously described in [Isomura et al. (2009)](https://www.nature.com/articles/nn.2431), published as [doi:10.5281/zenodo.22055254](https://zenodo.org/records/22055254). Each session contains `All.clu.X` and `All.res.X` files, with X = 1, 2 indicating the index of the tetrode (1: L2/3, also referred to as superficial layer; 2: L5, or deep layer).
 
 Set `data_root = "/path/to/data"` (or the dataset path variable) in `src/data_manager.py`, line 13, before running. Choose which session to analyze using the configuration file (see below).
 
